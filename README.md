@@ -24,7 +24,12 @@ yarn install
 yarn start
 ```
 ### Future Goals
+
 Adding react-intl,connected-redux-router,redux-saga .
+
 build a small backend to recreate the crud process and authentification process , using NestJs , passportjs , TypeOrm.
+
 Create a generic boundrey context for errors.
+
 create a generic Notification module for faiable actions .
+
