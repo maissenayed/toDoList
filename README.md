@@ -40,7 +40,7 @@ docker pull maissenayed/to-do-list
 
 
 # Run using Docker
-⚠️ Before deploy the app in a container set the right **configuration** as explained in the section below, and then you can run:
+
 ``` 
 docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true maissenayed/to-do-list
 ```
