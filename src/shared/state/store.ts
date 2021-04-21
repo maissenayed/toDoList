@@ -28,5 +28,5 @@ export const store = configureStore({ reducer, preloadedState: persistedStore })
 export type TStore = ReturnType<typeof store.getState>
 store.subscribe(() => {
   // persist your state
-  localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+  saveState(store.getState())
 })
