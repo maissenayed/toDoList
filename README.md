@@ -93,7 +93,7 @@ The project is structured as follow:
 
     layout: define the app layout and general components .
     
-    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  ;
+    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  ,
 
 
 
