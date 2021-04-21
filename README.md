@@ -23,6 +23,10 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn dev
 ```
+to access the app please go to 
+```
+http://localhost:3001/auth
+```
 to connect please use these cardinantials 
 
 ```
