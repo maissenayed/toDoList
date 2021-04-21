@@ -23,10 +23,15 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn dev
 ```
+# Docker Pull Command
+to get the project docker image please use this commend
+``` 
+docker pull maissenayed/to-do-list
+```
 
 
 
-# Deploy using Docker
+# Run using Docker
 ⚠️ Before deploy the app in a container set the right **configuration** as explained in the section below, and then you can run:
 ``` 
 docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true todo:dev
