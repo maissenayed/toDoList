@@ -7,7 +7,7 @@ import {
   updateTodo,
   ToDoStatus,
   ToDoType,
-} from '../../shared/state/slices/toDoList.slice'
+} from '../../../../shared/state/slices/toDoList.slice'
 
 const UpdateDrawer = ({ toDo }: { toDo: ToDoType }) => {
   const [form] = Form.useForm()

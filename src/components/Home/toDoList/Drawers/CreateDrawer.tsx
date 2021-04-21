@@ -6,7 +6,7 @@ import {
   create,
   ToDoStatus,
   ToDoType,
-} from '../../shared/state/slices/toDoList.slice'
+} from '../../../../shared/state/slices/toDoList.slice'
 
 const CreateDrawer = () => {
   const [form] = Form.useForm()
@@ -43,7 +43,7 @@ const CreateDrawer = () => {
 
   return (
     <>
-      <Row justify="center">
+      <Row justify="start">
         <Button onClick={() => toggleVisibility()}>Create</Button>
       </Row>
       <Drawer
@@ -68,7 +68,13 @@ const CreateDrawer = () => {
           </div>
         }
       >
-        <Form id="myForm" form={form} hideRequiredMark onFinish={onFinish}>
+        <Form
+          id="myForm"
+          form={form}
+          hideRequiredMark
+          onFinish={onFinish}
+          preserve={false}
+        >
           <Row gutter={16} justify="center" align="middle">
             <Col span={12}>
               <Form.Item

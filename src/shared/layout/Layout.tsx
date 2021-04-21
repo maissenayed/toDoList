@@ -16,6 +16,7 @@ const StyledContent = styled(Layout.Content)`
 const Sizer = styled.div`
   margin: auto;
   height: 100%;
+  align-items: center;
 `
 
 const AppLayout = () => (

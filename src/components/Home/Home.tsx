@@ -2,14 +2,14 @@ import { Col, Row, Typography } from 'antd'
 import * as React from 'react'
 import styled from 'styled-components'
 
-import ToDoList from './ToDoList'
+import ToDoList from './toDoList/ToDoList'
 
 const LandingLayout = styled.div`
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: grid;
-
-  grid-template-rows: auto;
+  align-items: center;
+  grid-template-columns: auto;
 `
 const Home = () => (
   <>
@@ -19,6 +19,7 @@ const Home = () => (
           Welcome back, let it be a productive day
         </Typography.Title>
       </Row>
+
       <ToDoList />
     </LandingLayout>
   </>

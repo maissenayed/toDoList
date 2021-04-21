@@ -1,21 +1,19 @@
-import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
-import { Avatar, Button, List, Select, Space, Tooltip } from 'antd'
+import { DeleteOutlined } from '@ant-design/icons'
+import { Avatar, Button, List, Select, Tooltip, Typography } from 'antd'
 import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { remove, ToDoType } from '../../shared/state/slices/toDoList.slice'
-import { TStore } from '../../shared/state/store'
-import CreateDrawer from './CreateDrawer'
-import UpdateDrawer from './UpdateDrawer'
+import {
+  changeStatus,
+  remove,
+  ToDoStatus,
+  ToDoType,
+} from '../../../shared/state/slices/toDoList.slice'
+import { TStore } from '../../../shared/state/store'
+import CreateDrawer from './Drawers/CreateDrawer'
+import UpdateDrawer from './Drawers/UpdateDrawer'
 
 const { Option } = Select
-
-const IconText = ({ icon, text }: any) => (
-  <Space>
-    {React.createElement(icon)}
-    {text}
-  </Space>
-)
 
 const ToDoList = () => {
   const [todolist, setTodolist] = React.useState([])
@@ -23,6 +21,10 @@ const ToDoList = () => {
 
   const removeToDo = (values: ToDoType) => {
     dispatch(remove(values))
+  }
+
+  const changeToDoStatus = (values: ToDoType) => {
+    dispatch(changeStatus(values))
   }
 
   const todoListSelector = useSelector((state: TStore) => state.toDoListReducer)
@@ -34,15 +36,14 @@ const ToDoList = () => {
     <>
       <CreateDrawer />
       <List
+        bordered
+        header={<Typography.Title level={5}>To do list</Typography.Title>}
         size="large"
         pagination={{
-          onChange: (page) => {
-            console.log(page)
-          },
           pageSize: 7,
         }}
         dataSource={todolist}
-        renderItem={(item) => (
+        renderItem={(item: ToDoType) => (
           <List.Item
             key={item.id}
             actions={[
@@ -68,9 +69,15 @@ const ToDoList = () => {
               title={item.title}
               description={item.description}
             />
-            <Select style={{ width: '200px' }}>
-              <Option value="complete">Complete</Option>
-              <Option value="incomplete">Incomplete</Option>
+            <Select
+              value={item.status}
+              onChange={(value: ToDoStatus) => {
+                changeToDoStatus({ ...item, status: value })
+              }}
+              style={{ width: '200px' }}
+            >
+              <Option value={ToDoStatus.complete}>Complete</Option>
+              <Option value={ToDoStatus.inComplete}>Incomplete</Option>
             </Select>
           </List.Item>
         )}

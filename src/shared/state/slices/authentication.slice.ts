@@ -16,7 +16,10 @@ const authenticationSlice = createSlice({
       state.email = payload.email
       state.password = payload.password
     },
+    logout: () => {
+      return initialState
+    },
   },
 })
 export const authenticationReducer = authenticationSlice.reducer
-export const { login } = authenticationSlice.actions
+export const { login, logout } = authenticationSlice.actions

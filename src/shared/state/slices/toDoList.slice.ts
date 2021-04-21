@@ -28,11 +28,9 @@ const toDoListSlice = createSlice({
       return state.filter((todo) => todo.id !== payload?.id)
     },
     updateTodo(state, action) {
-      console.log('rrrrrrrrrr')
       const todo = state.find((t) => t.id === action.payload?.id)
-      console.log('rrrrrrrrrr')
+
       if (todo) {
-        console.log('rrrrrrrrrr', todo)
         todo.status = action.payload.status
         todo.title = action.payload.title
         todo.description = action.payload.description
