@@ -86,10 +86,14 @@ create a generic Notification module for faiable actions .
 
 ## Architecture of the React project
 The project is structured as follow:
-- components:provides the different components of the application..
+
+- components:provides the different components of the application.
+
 - shared: defines  the logic of commun components , services ,state and types.
-    layout: define the app layout and general components 
-    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  
+
+    layout: define the app layout and general components .
+    
+    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  ;
 
 
 
