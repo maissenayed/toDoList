@@ -27,9 +27,7 @@ This will run the application locally on port 3000. To access the application, n
 ```sh
 localhost:3000
 ```
-```
-http://localhost:3001/auth
-```
+
 to connect use these cardinantials 
 
 ```
