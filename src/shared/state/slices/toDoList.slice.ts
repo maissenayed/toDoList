@@ -1,0 +1,60 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+export enum ToDoStatus {
+  complete = 'Complete',
+  inComplete = 'in complete',
+}
+
+export type ToDoType = {
+  id?: string
+  title: string
+  description: string
+  status: ToDoStatus
+}
+const initialState: ToDoType[] = []
+const toDoListSlice = createSlice({
+  name: 'toDoList',
+  initialState,
+  reducers: {
+    create(state, action) {
+      state.push(action.payload)
+    },
+    loader(_, { payload }) {
+      //  returns a new value to replace the old one
+      return payload
+    },
+    remove(state, { payload }: PayloadAction<ToDoType>) {
+      // Construct a new result array immutably and return it
+      return state.filter((todo) => todo.id !== payload?.id)
+    },
+    updateTodo(state, action) {
+      console.log('rrrrrrrrrr')
+      const todo = state.find((t) => t.id === action.payload?.id)
+      console.log('rrrrrrrrrr')
+      if (todo) {
+        console.log('rrrrrrrrrr', todo)
+        todo.status = action.payload.status
+        todo.title = action.payload.title
+        todo.description = action.payload.description
+        // This object is still wrapped in a Proxy, so we can "mutate" it
+      }
+      localStorage.setItem('toDoList', JSON.stringify(state))
+    },
+    changeStatus(state, action) {
+      const todo: ToDoType = state.find((t) => t.id === action.payload.id)
+      if (todo) {
+        // This object is still wrapped in a Proxy, so we can "mutate" it
+        todo.status = action.payload.status
+      }
+    },
+  },
+})
+
+export const toDoListReducer = toDoListSlice.reducer
+export const {
+  updateTodo,
+  create,
+  loader,
+  remove,
+  changeStatus,
+} = toDoListSlice.actions

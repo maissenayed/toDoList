@@ -1,26 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "types": ["react", "node"],
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["dom", "es2015", "es2017", "esnext", "es2019", "es6"],
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*", ".eslintrc.js", "craco.config.js"],
+  "exclude": ["node_modules", "test", "dist", "dist/**/*spec.ts"]
 }

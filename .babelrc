@@ -1,0 +1,45 @@
+{
+  "presets": [["@babel/preset-env", { "useBuiltIns": "entry" }], "@babel/preset-react", "@babel/preset-typescript"],
+  "plugins": [
+
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "@material-ui/core",
+        "libraryDirectory": "esm",
+        "camel2DashComponentName": false
+      },
+      "core"
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "@material-ui/icons",
+        "libraryDirectory": "esm",
+        "camel2DashComponentName": false
+      },
+      "icons"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib"
+      },
+      "antd"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@ant-design/icons",
+        "libraryDirectory": "es/icons",
+        "camel2DashComponentName": false
+      },
+      "@ant-design/icons"
+    ],
+    ["module-resolver", { "root": ["./src"] }],
+    ["@babel/plugin-transform-runtime", { "runtimeHelpers": true }],
+    "react-hot-loader/babel",
+    "transform-class-properties"
+  ]
+}
