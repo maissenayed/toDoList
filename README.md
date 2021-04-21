@@ -35,7 +35,7 @@ to connect use these cardinantials
  ```
 
 
-## Docker
+# Docker
 **to do list** is very easy to install and deploy in a docker container.
 
 By default, the repository is equipped with a Dockerfile enabling to build an out-of-the-box docker image.
