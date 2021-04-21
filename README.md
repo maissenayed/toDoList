@@ -35,9 +35,19 @@ to connect use these cardinantials
  ```
 
 
+## Docker
+**to do list** is very easy to install and deploy in a docker container.
+
+By default, the repository is equipped with a Dockerfile enabling to build an out-of-the-box docker image.
+To build the image from the Dockerfile, enter:
+```sh
+ sudo docker build -t maissenayed/to-do-list .
+```
+This will create the image tagged as *pickar-currency-converter* and pull in the necessary dependencies.
+
 
 # Docker Pull Command
-to get the project docker image please use this commend
+to get the project image from the docker hub  you can pull the image by using this commend
 ``` 
 docker pull maissenayed/to-do-list
 ```
