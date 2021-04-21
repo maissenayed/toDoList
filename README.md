@@ -23,7 +23,10 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn dev
 ```
-to access the app  go to 
+This will run the application locally on port 3000. To access the application, navigate to:
+```sh
+localhost:3000
+```
 ```
 http://localhost:3001/auth
 ```
