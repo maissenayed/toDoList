@@ -8,7 +8,7 @@ This project is an example of implementation of a an interview ToDoList exercice
 | Project | Package |Version | Links |
 | ------- | ------- | ------- |------- |
 | *ant D* | [`antD`](https://www.npmjs.com/package/antd) |![version](http://img.shields.io/npm/v/antd.svg?style=flat-square) | https://ant.design/
-(https://www.npmjs.com/package/@ionic/vue) | [`README.md`](packages/vue/README.md)
+
 | **React** | [`@ionic/react`](https://www.npmjs.com/package/@ionic/react) | [![version](https://img.shields.io/npm/v/@ionic/react/latest.svg)](https://www.npmjs.com/package/@ionic/react) | [`README.md`](packages/react/README.md)
 
 # Getting started
