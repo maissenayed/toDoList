@@ -23,6 +23,14 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn dev
 ```
+to connect please use these cardinantials 
+
+```
+ { email: 'test@test.com', password: 'test' }
+ ```
+
+
+
 # Docker Pull Command
 to get the project docker image please use this commend
 ``` 
