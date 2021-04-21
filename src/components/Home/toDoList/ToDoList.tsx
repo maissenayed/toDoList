@@ -16,20 +16,25 @@ import UpdateDrawer from './Drawers/UpdateDrawer'
 const { Option } = Select
 
 const ToDoList = () => {
-  const [todolist, setTodolist] = React.useState([])
+  const [todoList, setTodoList] = React.useState([])
   const dispatch = useDispatch()
 
+  // remove toDo action
   const removeToDo = (values: ToDoType) => {
     dispatch(remove(values))
   }
-
+  // remove toDo status action
   const changeToDoStatus = (values: ToDoType) => {
     dispatch(changeStatus(values))
   }
-
+  // get To-do list from state
   const todoListSelector = useSelector((state: TStore) => state.toDoListReducer)
+
+  // to populate the component local state (useState) by store data
+  // we should use useEffect to reRender the component every time the to-do List State change
+
   React.useEffect(() => {
-    setTodolist(todoListSelector)
+    setTodoList(todoListSelector)
   }, [todoListSelector])
 
   return (
@@ -42,7 +47,7 @@ const ToDoList = () => {
         pagination={{
           pageSize: 7,
         }}
-        dataSource={todolist}
+        dataSource={todoList}
         renderItem={(item: ToDoType) => (
           <List.Item
             key={item.id}

@@ -1,4 +1,4 @@
-import { Col, Row, Typography } from 'antd'
+import { Row, Typography } from 'antd'
 import * as React from 'react'
 import styled from 'styled-components'
 

@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import reducer from './reducer/reducer'
+import reducer from './reducer/rootReducer.reducer'
 
-// Mocking Up a small backend
+// Mocking Up a small backend ,
+// by saving our redux store into the local storage to mock auth session and getting data from db
 
 export const loadState = () => {
   try {

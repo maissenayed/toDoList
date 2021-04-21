@@ -18,6 +18,7 @@ const authenticationSlice = createSlice({
       state.email = payload.email
       state.password = payload.password
     },
+    // return initial state on logout
     logout: () => {
       return initialState
     },
