@@ -2,7 +2,11 @@
 
 This project is an example of implementation of a an interview ToDoList exercice
 
-It can be used as starter for a new project: it implements API for user sign-in/sign-up and features like **email verification**, **forgotten password**, **reset password**, **update profile** and **settings**.
+# Packages
+| Project	|Package|	Version	|Links
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
 # Getting started
 
@@ -14,3 +18,6 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn start
 ```
+
+# Technologies used 
+
