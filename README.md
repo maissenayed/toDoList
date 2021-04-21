@@ -46,7 +46,7 @@ To build the image from the Dockerfile, enter:
 This will create the image tagged as *pickar-currency-converter* and pull in the necessary dependencies.
 
 
-# Docker Pull Command
+### Docker Pull Command
 to get the project image from the docker hub  you can pull the image by using this commend
 ``` 
 docker pull maissenayed/to-do-list
@@ -54,7 +54,7 @@ docker pull maissenayed/to-do-list
 
 
 
-# Run using Docker
+### Run using Docker
 
 ``` 
 docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true maissenayed/to-do-list
