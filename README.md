@@ -55,9 +55,15 @@ docker pull maissenayed/to-do-list
 
 
 ### Run using Docker
+Once done, run the docker image and map the port to whatever you wish on your host. In this example, we simply map port 3001 of the host to port 3000 of the container.
 
 ``` 
 docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true maissenayed/to-do-list
+```
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+localhost:3001
 ```
 
 # Testing a live Demo
@@ -76,5 +82,14 @@ build a small backend to recreate the crud process and authentification process 
 Create a generic boundrey context for errors.
 
 create a generic Notification module for faiable actions .
+
+
+## Architecture of the React project
+The project is structured as follow:
+- components:provides the different components of the application..
+- shared: defines  the logic of commun components , services ,state and types.
+    layout: define the app layout and general components 
+    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  
+
 
 
