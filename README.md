@@ -15,7 +15,7 @@ This project is an example of implementation of a an interview ToDoList exercice
 
 # Getting started
 
-Install `nodejs` and `mongodb` in your machine.
+Install `nodejs` and `yarn` in your machine.
 
 Install dependencies with yarn and run the application:
 
