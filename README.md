@@ -5,8 +5,8 @@ This project is an example of implementation of a an interview ToDoList exercice
 
 ### Packages
 
-| Project | |Version | Links |
-| ------- | | ------- |------- |
+| Project | Version | Links |
+| ------- | ------- |------- |
 | *ant D* | [version](http://img.shields.io/npm/v/antd.svg?style=flat-square) | https://ant.design/
 | **React** | [`@ionic/react`](https://www.npmjs.com/package/@ionic/react) | [version](https://img.shields.io/npm/v/react.svg?style=flat)]|(https://www.npmjs.com/package/@ionic/react) | https://reactjs.org/
 
