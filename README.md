@@ -23,6 +23,15 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn start
 ```
+
+
+
+# Deploy using Docker
+⚠️ Before deploy the app in a container set the right **configuration** as explained in the section below, and then you can run:
+``` 
+docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true todo:dev
+```
+
 ### Future Goals
 
 Adding react-intl,connected-redux-router,redux-saga .
@@ -32,4 +41,5 @@ build a small backend to recreate the crud process and authentification process 
 Create a generic boundrey context for errors.
 
 create a generic Notification module for faiable actions .
+
 
