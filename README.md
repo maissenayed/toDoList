@@ -9,6 +9,9 @@ This project is an example of implementation of a an interview ToDoList exercice
 | ------- | ------- |------- |
 | *ant D* | ^4.15.2 | https://ant.design/
 | **React** | ^16.8.2 | https://reactjs.org/
+| **Redux** | ^4.8.5 | https://redux.js.org/
+| **Redux-toolkit** | ^1.5.1 | https://redux-toolkit.js.org/
+| **TypeScript** | ^4.2.1 | https://www.typescriptlang.org/docs/handbook/intro.html
 
 # Getting started
 
