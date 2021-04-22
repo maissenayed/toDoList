@@ -1,7 +1,7 @@
 # Super Charged ToDoList starter with react 16.8+ /redux /redux Toolkit /Typscript [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://bitbucket.org/lbesson/ansi-colors)
 
 
-This project is an example of implementation of a an interview ToDoList exercice
+This project is an example of  an interview implementation of a ToDoList exercice
 
 ### Packages
 
