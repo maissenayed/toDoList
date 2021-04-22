@@ -64,7 +64,11 @@ const LoginComponent = () => {
         </Form.Item>
         {errorLogIn ? (
           <Form.Item>
-            <Alert message="" type="error" showIcon />{' '}
+            <Alert
+              message="You have entered an invalid username or password"
+              type="error"
+              showIcon
+            />{' '}
           </Form.Item>
         ) : null}
         <Form.Item>
