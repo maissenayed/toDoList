@@ -8,4 +8,4 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - ${REACT_LISTEN_PORT:-3000}:5000
+      - ${REACT_LISTEN_PORT:-3000}:3000

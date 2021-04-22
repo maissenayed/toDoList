@@ -32,7 +32,7 @@
   },
   "scripts": {
     "dev": "craco start",
-    "start": "serve -s build",
+    "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "lint:code": "eslint --ext ts,tsx src"
