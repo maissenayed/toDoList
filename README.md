@@ -40,7 +40,7 @@ to connect use these cardinantials
 ### Docker Pull Command
 to get the project image from the docker hub  you can pull the image by using this commend
 ``` 
-docker pull maissenayed/to-do-list
+docker pull maissenayed/todolist
 ```
 
 
