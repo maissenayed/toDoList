@@ -1,10 +1,13 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons'
-import { Button, Card, Form, Input, Row, Typography } from 'antd'
+import { Alert, Button, Card, Form, Input, Row, Typography } from 'antd'
 import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-import { login } from '../../shared/state/slices/authentication.slice'
+import {
+  hardCodedUser,
+  login,
+} from '../../shared/state/slices/authentication.slice'
 import { TStore } from '../../shared/state/store'
 
 const LoginHeader = styled(Typography.Title)`
@@ -13,6 +16,7 @@ const LoginHeader = styled(Typography.Title)`
 const LoginCard = styled(Card)``
 
 const LoginComponent = () => {
+  const [errorLogIn, setErrorLogIn] = React.useState(false)
   const dispatch = useDispatch()
   const onFinish = (values: { email: string; password: string }) => {
     dispatch(login({ email: values.email, password: values.password }))
@@ -21,7 +25,13 @@ const LoginComponent = () => {
   const { email, password } = useSelector(
     (state: TStore) => state.authenticationReducer
   )
-
+  React.useEffect(() => {
+    const notInitialValue = email !== '' && password !== ''
+    const hardCodedValue =
+      email !== hardCodedUser.email && password !== hardCodedUser.password
+    const errorLogic = notInitialValue && hardCodedValue
+    setErrorLogIn(errorLogic)
+  }, [email, password])
   return (
     <LoginCard>
       <Row justify="center">
@@ -52,7 +62,11 @@ const LoginComponent = () => {
             placeholder="Password"
           />
         </Form.Item>
-
+        {errorLogIn ? (
+          <Form.Item>
+            <Alert message="" type="error" showIcon />{' '}
+          </Form.Item>
+        ) : null}
         <Form.Item>
           <Button
             type="primary"

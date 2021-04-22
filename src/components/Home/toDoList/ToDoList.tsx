@@ -1,5 +1,13 @@
-import { DeleteOutlined } from '@ant-design/icons'
-import { Avatar, Button, List, Select, Tooltip, Typography } from 'antd'
+import { DeleteOutlined, QuestionCircleOutlined } from '@ant-design/icons'
+import {
+  Avatar,
+  Button,
+  List,
+  Popconfirm,
+  Select,
+  Tooltip,
+  Typography,
+} from 'antd'
 import * as React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -55,16 +63,17 @@ const ToDoList = () => {
               <Tooltip key={item.id} placement="topLeft" title="Update">
                 <UpdateDrawer toDo={item} />
               </Tooltip>,
-              <Tooltip key={item.id} placement="topLeft" title="Remove">
-                <Button
-                  icon={<DeleteOutlined />}
-                  onClick={() => removeToDo(item)}
-                  danger
-                  type="primary"
-                >
-                  Remove
-                </Button>
-              </Tooltip>,
+              <Popconfirm
+                onConfirm={() => removeToDo(item)}
+                title="Are you sure？"
+                icon={<QuestionCircleOutlined style={{ color: 'red' }} />}
+              >
+                <Tooltip key={item.id} placement="bottomLeft" title="Remove">
+                  <Button icon={<DeleteOutlined />} danger type="primary">
+                    Remove
+                  </Button>
+                </Tooltip>
+              </Popconfirm>,
             ]}
           >
             <List.Item.Meta

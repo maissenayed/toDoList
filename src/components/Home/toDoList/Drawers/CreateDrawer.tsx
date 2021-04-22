@@ -49,6 +49,7 @@ const CreateDrawer = () => {
       <Drawer
         title="Create a new todo"
         destroyOnClose
+        width={720}
         onClose={onClose}
         visible={showDrawer}
         bodyStyle={{ paddingBottom: 80 }}
