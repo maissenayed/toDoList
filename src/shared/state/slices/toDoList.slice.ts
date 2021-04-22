@@ -18,6 +18,7 @@ const toDoListSlice = createSlice({
   initialState,
   reducers: {
     create(state, action) {
+      // push a new to do to the to do list
       state.push(action.payload)
     },
     loader(_, { payload }) {
@@ -37,7 +38,6 @@ const toDoListSlice = createSlice({
         todo.description = action.payload.description
         // This object is still wrapped in a Proxy, so we can "mutate" it
       }
-      localStorage.setItem('toDoList', JSON.stringify(state))
     },
     changeStatus(state, action) {
       const todo: ToDoType = state.find((t) => t.id === action.payload.id)

@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
+// hard coded User
 export const hardCodedUser = { email: 'test@test.com', password: 'test' }
 
-const initialState = {
+const initialState: TPayload = {
   email: '',
   password: '',
 }
@@ -15,6 +16,7 @@ const authenticationSlice = createSlice({
   initialState,
   reducers: {
     login: (state, { payload }: PayloadAction<TPayload>) => {
+      // update user state
       state.email = payload.email
       state.password = payload.password
     },

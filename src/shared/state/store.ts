@@ -23,10 +23,13 @@ export const saveState = (state: TStore) => {
     console.log(err)
   }
 }
+
 const persistedStore = loadState()
 
 export const store = configureStore({ reducer, preloadedState: persistedStore })
+
 export type TStore = ReturnType<typeof store.getState>
+
 store.subscribe(() => {
   // persist your state
   saveState(store.getState())

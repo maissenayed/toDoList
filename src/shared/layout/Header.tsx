@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import { logout } from '../state/slices/authentication.slice'
 
-const StyledHeader = styled(Layout.Header)``
 const TitleHeader = styled(Typography.Text)`
   color: white;
   font-size: 24px;
@@ -17,7 +16,7 @@ const Header = () => {
     dispatch(logout())
   }
   return (
-    <StyledHeader>
+    <Layout.Header>
       <Row justify="space-between" align="middle">
         <Col>
           <TitleHeader>To do list</TitleHeader>
@@ -36,7 +35,7 @@ const Header = () => {
           </Row>
         </Col>
       </Row>
-    </StyledHeader>
+    </Layout.Header>
   )
 }
 

@@ -1,15 +1,11 @@
 version: '3.7'
 
 services:
-  sample:
+  todo:
+    image: maissenayed/todolist
     container_name: todo
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - '.:/app'
-      - '/app/node_modules'
     ports:
-      - 3001:3000
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+      - ${REACT_LISTEN_PORT:-3000}:5000
