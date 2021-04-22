@@ -36,15 +36,6 @@ to connect use these cardinantials
 
 
 # Docker
-**to do list** is very easy to install and deploy in a docker container.
-
-By default, the repository is equipped with a Dockerfile enabling to build an out-of-the-box docker image.
-To build the image from the Dockerfile, enter:
-```sh
- sudo docker build -t maissenayed/to-do-list .
-```
-This will create the image tagged as *pickar-currency-converter* and pull in the necessary dependencies.
-
 
 ### Docker Pull Command
 to get the project image from the docker hub  you can pull the image by using this commend
@@ -53,18 +44,22 @@ docker pull maissenayed/to-do-list
 ```
 
 
-
-### Run using Docker
-Once done, run the docker image and map the port to whatever you wish on your host. In this example, we simply map port 3001 of the host to port 3000 of the container.
+### Run using Docker compose
 
 ``` 
-docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true maissenayed/to-do-list
+docker-compose up 
 ```
 Verify the deployment by navigating to your server address in your preferred browser.
 
 ```sh
-localhost:3001
+localhost:3000
 ```
+if you want to to run it on another port 
+
+```
+ REACT_LISTEN_PORT=5000 docker-compose up -d
+ ```
+
 
 # Testing a live Demo
 you can see the app deployed on heroku from this link 
