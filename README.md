@@ -23,19 +23,43 @@ Install dependencies with yarn and run the application:
 yarn install
 yarn dev
 ```
-# Docker Pull Command
-to get the project docker image please use this commend
+This will run the application locally on port 3000. To access the application, navigate to:
+```sh
+localhost:3000
+```
+
+to connect use these cardinantials 
+
+```
+ { email: 'test@test.com', password: 'test' }
+ ```
+
+
+# Docker
+
+### Docker Pull Command
+to get the project image from the docker hub  you can pull the image by using this commend
 ``` 
-docker pull maissenayed/to-do-list
+docker pull maissenayed/todolist
 ```
 
 
+### Run using Docker compose
 
-# Run using Docker
-⚠️ Before deploy the app in a container set the right **configuration** as explained in the section below, and then you can run:
 ``` 
-docker run -it  --rm  -v /app/node_modules  -p 3001:3000 -e CHOKIDAR_USEPOLLING=true todo:dev
+docker-compose up 
 ```
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+localhost:3000
+```
+if you want to to run it on another port 
+
+```
+ REACT_LISTEN_PORT=5000 docker-compose up -d
+ ```
+
 
 # Testing a live Demo
 you can see the app deployed on heroku from this link 
@@ -53,5 +77,18 @@ build a small backend to recreate the crud process and authentification process 
 Create a generic boundrey context for errors.
 
 create a generic Notification module for faiable actions .
+
+
+## Architecture of the React project
+The project is structured as follow:
+
+- components:provides the different components of the application.
+
+- shared: defines  the logic of commun components , services ,state and types.
+
+    layout: define the app layout and general components .
+    
+    state : define redux store and state , and modular slices , inspired from  redux Ducks pattern  ,
+
 
 
